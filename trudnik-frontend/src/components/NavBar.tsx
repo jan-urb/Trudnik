@@ -11,7 +11,8 @@ const NavBar = () => {
     return (
         <nav className="sticky top-0 z-50 bg-primary-foreground/20 backdrop-blur-sm border-b border-accent/40 w-full">
             <div className="flex items-center gap-6 px-6 py-4">
-                <Link to="/">
+                <Link to="/" className="flex items-center gap-2">
+                    <img src="/logo.svg" alt="" className="h-8 w-8" />
                     <h1 className="font-serif text-3xl font-bold tracking-tight text-accent cursor-pointe leading-tight">
                         Kariernik
                     </h1>
