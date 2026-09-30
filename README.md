@@ -7,5 +7,6 @@ Trudnik (Kariernik) je spletni portal za iskanje zaposlitve v Sloveniji. Zbira o
 ```
 Trudnik/
 ├── trudnik-backend/    # REST API (Node.js, Express, PostgreSQL)
-└── trudnik-frontend/   # Spletni vmesnik (React, TypeScript, Vite)
+├── trudnik-frontend/   # Spletni vmesnik (React, TypeScript, Vite)
+└── trudnik-scraper/    # Zbiranje oglasov (Node.js, Python, browser-use)
 ```
