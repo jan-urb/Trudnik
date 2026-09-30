@@ -8,7 +8,7 @@ function parsePagination(query) {
 
 function sanitizeSearch(value) {
     if (typeof value !== 'string') return null;
-    return value.trim().replace(/[^\p{L}\p{N} ]/gu, '').slice(0, 100) || null;
+    return value.trim().slice(0, 100) || null;
 }
 
 // @desc   Get jobs (paginated)

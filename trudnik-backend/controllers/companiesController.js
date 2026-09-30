@@ -6,9 +6,10 @@ function parsePagination(query) {
     return { limit, offset };
 }
 
+// Keeps only letters and digits, matching how company names are normalized in the search query
 function sanitizeSearch(value) {
     if (typeof value !== 'string') return null;
-    return value.trim().replace(/[^\p{L}\p{N} ]/gu, '').slice(0, 100) || null;
+    return value.trim().replace(/[^\p{L}\p{N}]/gu, '').slice(0, 100) || null;
 }
 
 // @desc   Get companies (paginated)

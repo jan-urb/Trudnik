@@ -19,9 +19,12 @@ export const getCompanyByIdQuery = async (id) => {
   return rows[0];
 };
 
+// Company name with punctuation and spaces removed
+const normalizedCompanyName = "regexp_replace(c.company_name, '[^[:alnum:]]', '', 'g')";
+
 export const getCompaniesBySearchQuery = async (limit, offset, search) => {
   const { rows } = await pool.query(
-    `SELECT c.id, c.company_name, c.company_website, ci.name AS city_name FROM company c LEFT JOIN city ci ON c.city_id = ci.id WHERE c.company_name ILIKE $1 || '%' ORDER BY c.id LIMIT $2 OFFSET $3`,
+    `SELECT c.id, c.company_name, c.company_website, ci.name AS city_name FROM company c LEFT JOIN city ci ON c.city_id = ci.id WHERE ${normalizedCompanyName} ILIKE '%' || $1 || '%' ORDER BY (${normalizedCompanyName} ILIKE $1 || '%') DESC, c.id LIMIT $2 OFFSET $3`,
     [search, limit, offset]
   );
   return rows;
@@ -29,7 +32,7 @@ export const getCompaniesBySearchQuery = async (limit, offset, search) => {
 
 export const getCompaniesBySearchTotalCount = async (search) => {
   const { rows } = await pool.query(
-    `SELECT COUNT(*) FROM company c LEFT JOIN city ci ON c.city_id = ci.id WHERE c.company_name ILIKE $1 || '%'`,
+    `SELECT COUNT(*) FROM company c LEFT JOIN city ci ON c.city_id = ci.id WHERE ${normalizedCompanyName} ILIKE '%' || $1 || '%'`,
     [search]
   );
   return parseInt(rows[0].count, 10);

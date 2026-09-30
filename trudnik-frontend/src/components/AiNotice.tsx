@@ -7,7 +7,7 @@ const AiNotice = () => {
             <TriangleAlert />
             <AlertTitle className="font-mono text-sm">Obvestilo!</AlertTitle>
             <AlertDescription className="font-mono text-xs">
-                Podatki o delovnih mestih in podjetjih so pridobljeni in obdelani s pomočjo umetne inteligence, zato lahko vsebujejo napake.
+                Podatki o delovnih mestih in podjetjih so pridobljeni in obdelani s pomočjo umetne inteligence, zato lahko vsebujejo napake. Podatki se prav tako ne posodabljajo redno, zato nekatera delovna mesta morda niso več aktualna.
             </AlertDescription>
         </Alert>
     )
