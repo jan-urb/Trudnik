@@ -9,9 +9,3 @@ Trudnik/
 ├── trudnik-backend/    # REST API (Node.js, Express, PostgreSQL)
 └── trudnik-frontend/   # Spletni vmesnik (React, TypeScript, Vite)
 ```
-
-## Namestitev
-
-- **Frontend:** Vercel (korenska mapa `trudnik-frontend`)
-- **Backend:** Railway (korenska mapa `trudnik-backend`)
-- **Baza podatkov:** PostgreSQL na Supabase
