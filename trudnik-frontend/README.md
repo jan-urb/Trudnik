@@ -1,12 +1,12 @@
-# Trudnik — Frontend
+# Trudnik Frontend
 
-Job search platform frontend built with React and TypeScript.
+Spletni vmesnik aplikacije za iskanje zaposlitve Trudnik, zgrajen z React, TypeScript in Vite.
 
-## Tech Stack
+## Tehnologije
 
-- **React 19** with TypeScript
-- **Vite** — build tool and dev server
-- **Tailwind CSS v4** — utility-first styling
-- **Base UI** + **shadcn/ui** — UI primitives and components
-- **React Router v7** — client-side routing
-- **PostHog** — product analytics
+- **React 19** s TypeScriptom
+- **Vite** — orodje za gradnjo in razvojni strežnik
+- **Tailwind CSS v4** — oblikovanje s pomožnimi razredi
+- **Base UI** + **shadcn/ui** — osnovni gradniki in komponente uporabniškega vmesnika
+- **React Router v7** — usmerjanje na strani odjemalca
+- **PostHog** — analitika uporabe
